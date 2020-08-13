@@ -29,5 +29,9 @@ else
     woff2_compress fonts/DSEG7ClassicMini-BoldItalic-hidden-hyphen-all-eight.ttf >&/dev/null
     rm fonts/DSEG7ClassicMini-BoldItalic-hidden-hyphen-all-eight.ttf
 
+    fontforge -lang=ff -c 'Open($1); Generate($2)' src/DSEG7ClassicMini-BoldItalic-only-hyphen.sfd fonts/DSEG7ClassicMini-BoldItalic-only-hyphen.ttf >&/dev/null
+    woff2_compress fonts/DSEG7ClassicMini-BoldItalic-only-hyphen.ttf >&/dev/null
+    rm fonts/DSEG7ClassicMini-BoldItalic-only-hyphen.ttf
+
     echo '[DSEG]DSEG font file is generated.'
 fi
